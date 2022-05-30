@@ -1,0 +1,31 @@
+1：拷贝小括号，写死右筋头，落地大括号
+2：@Functional Interface 修饰的接口都可以使用lambda表达式调用
+3：default 可以有多个
+4：static
+eg:
+new Thread(() -> {for（int i=1；i <=40；i++）ticket.sale();},name:"A"）.start();
+
+
+@FunctionalInterface
+interface Foo{
+  //public void sayHello();
+
+  public int add(int x, int y);
+
+  public default int mul(int x, int y)
+  {
+    return x*y;
+  }
+  public static int div(int x,int y){
+    return x/y;
+  }
+}
+psvm{
+  Foo foo=(int x, int y)->{
+  system. out. println("come in add method"); return x+y;
+  };
+  system. out. println(foo. add(x3,y:5));
+  system. out. print1n(foo. mul(x3,y:5));
+  // 4 static
+  system. out. println(Foo. div(x1e,a2));
+}
